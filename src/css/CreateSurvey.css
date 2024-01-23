@@ -1,0 +1,71 @@
+.create_survey_page {
+  @apply p-5;
+}
+
+.create_survey_page .heading {
+  @apply text-xl font-medium mb-3 text-heading;
+}
+
+.title_input,
+form > textarea {
+  @apply border border-gray-400 w-full outline-none p-3 rounded-md text-primary;
+}
+
+.create_survey_page .survey_title {
+  @apply -mb-3 mt-2 italic text-chocolate text-lg;
+}
+
+.survey_questions_section {
+  @apply mt-5;
+}
+
+.create_survey_page form {
+}
+
+.create_survey_page form label {
+  @apply text-xl;
+}
+
+.create_survey_page form textarea {
+  @apply text-xl;
+}
+
+.options_container {
+  @apply shadow-md py-5 px-3;
+}
+
+.options_container h2 {
+  @apply text-lg mb-2;
+}
+
+.options_select section {
+  @apply flex items-center gap-3 cursor-pointer;
+}
+
+.options_select section .icon {
+  @apply w-12 h-12 text-white bg-red-400 text-lg flex items-center justify-center mb-1 rounded-lg;
+}
+
+.options_select section .text {
+  @apply bg-sky_blue;
+}
+
+.options_select section .multiple {
+  @apply bg-pale_red;
+}
+
+.options_select section .upload {
+  @apply bg-light_green;
+}
+
+.options_select section p {
+  @apply text-lg;
+}
+
+.options_select section ul label {
+  @apply text-sm ml-2;
+}
+
+.options_input {
+  @apply border border-gray-300 outline-none w-full p-2;
+}

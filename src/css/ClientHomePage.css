@@ -1,0 +1,43 @@
+.client_home {
+  @apply p-5;
+}
+
+.client_nav {
+  @apply shadow-lg relative text-pale_red py-2;
+}
+
+.title_section {
+  @apply flex items-center gap-3;
+}
+
+.title_icon {
+  @apply w-16 h-16 rounded-full bg-pale_red text-5xl flex items-center justify-center text-white;
+}
+
+.title_section p {
+  @apply text-2xl font-semibold text-heading;
+}
+
+.posted_surveys {
+  @apply my-5;
+}
+
+.posted_surveys h1 {
+  @apply mb-3 text-2xl font-semibold text-heading;
+}
+
+.surveys_container {
+  @apply flex flex-wrap gap-3;
+}
+
+.surveys_container section {
+  @apply w-full shadow-md rounded-lg text-white p-3 text-2xl flex flex-col;
+}
+
+.surveys_container section .date {
+  @apply text-lg text-gray-200 font-semibold;
+}
+
+.delete_btn {
+  @apply self-end text-3xl cursor-pointer;
+}

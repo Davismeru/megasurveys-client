@@ -1,0 +1,19 @@
+.nav_container {
+  @apply flex justify-between items-center px-5 py-2;
+}
+
+.nav_container .logo {
+  @apply w-48;
+}
+
+.nav_container > div {
+  @apply flex items-center gap-3;
+}
+
+.nav_container > div > img {
+  @apply w-14 h-14 rounded-full object-cover;
+}
+
+.menu_icon {
+  @apply text-3xl cursor-pointer;
+}

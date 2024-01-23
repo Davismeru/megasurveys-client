@@ -1,0 +1,27 @@
+.card_container {
+  @apply flex-col justify-between;
+}
+
+.card_date {
+  @apply text-lg text-primary font-semibold;
+}
+
+.card_profile_details {
+  @apply flex items-center gap-3 relative;
+}
+
+.card_profile_img {
+  @apply bg-white w-20 h-20 rounded-full p-1;
+}
+
+.card_profile_img img {
+  @apply h-full w-full object-cover rounded-full;
+}
+
+.card_affiliate {
+  @apply absolute right-2 text-primary top-1/2 -translate-y-1/2 flex gap-2;
+}
+
+.card_affiliate span {
+  @apply text-gray-300;
+}

@@ -1,0 +1,36 @@
+/* auth pages */
+.auth_page {
+  @apply h-screen flex items-center justify-center px-5 text-xl;
+}
+
+.auth_page form {
+  @apply w-full bg-white h-fit rounded-xl p-5 text-primary shadow-md;
+}
+
+.auth_page h1 {
+  @apply font-medium text-heading mb-5;
+}
+
+.auth_page > form section {
+  @apply mb-5;
+}
+
+.auth_page > form section h3 {
+  @apply z-30 absolute left-[40%] bottom-0 translate-y-1/2 font-medium text-gray-500;
+}
+
+.auth_page > form input {
+  @apply outline-none shadow-sm shadow-gray-200 p-2 rounded-sm text-gray-500 w-full;
+}
+
+.auth_page > form label {
+  @apply -mb-3 mt-3;
+}
+
+.auth_page footer {
+  @apply my-3 text-lg;
+}
+
+.auth_page footer a {
+  @apply text-blue-500;
+}

@@ -1,0 +1,11 @@
+.freelancer_home {
+  @apply p-5;
+}
+
+.freelancer_nav {
+  @apply shadow-lg relative text-pale_red py-2;
+}
+
+.title_section {
+  @apply mb-3 text-2xl font-semibold text-heading;
+}
