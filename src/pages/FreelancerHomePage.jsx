@@ -46,7 +46,11 @@ function FreelancerHomePage() {
   return (
     <authedFreelancerContext.Provider value={{ authedUser }}>
       <div className="freelancer_nav">
-        <Nav profilePicture={authedUser?.profilePicture} />
+        <Nav
+          profilePicture={authedUser?.profilePicture}
+          userName={authedUser?.userName}
+          userType="freelancer"
+        />
       </div>
 
       <Routes>

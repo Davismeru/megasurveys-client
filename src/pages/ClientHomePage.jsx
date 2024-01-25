@@ -30,7 +30,11 @@ function ClientHomePage() {
   return (
     <authedClientContext.Provider value={{ authedUser, setAuthedUser }}>
       <div className="client_nav">
-        <Nav profilePicture={authedUser?.profilePicture} />
+        <Nav
+          profilePicture={authedUser?.profilePicture}
+          userName={authedUser?.userName}
+          userType="client"
+        />
       </div>
 
       <Routes>

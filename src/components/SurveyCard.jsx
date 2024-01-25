@@ -14,9 +14,9 @@ function SurveyCard({ survey, index }) {
       });
   }, []);
   return (
-    <section className={`${cardColors[index]} card_container`}>
+    <div className={`${cardColors[index]} card_container`}>
       <div>
-        <p>{survey.surveyTitle}</p>
+        <p className="card_survey_title">{survey.surveyTitle}</p>
         <p className="card_date">{client?.createdAt?.substring(0, 10)}</p>
       </div>
 
@@ -33,7 +33,7 @@ function SurveyCard({ survey, index }) {
           {client.affiliate}
         </p>
       </div>
-    </section>
+    </div>
   );
 }
 

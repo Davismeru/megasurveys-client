@@ -99,21 +99,22 @@ function FreelancerSignUp() {
         </section>
 
         {/* upload profile picture */}
-        <section>
+        <section className="relative h-32">
           <label className="upload_label">Upload profile picture</label>
-          <div className="upload_btn_container bg-red-300">
+          <div className="upload_btn_container">
             <input
               type="file"
+              accept=".png, .jpg, .jpeg"
               className="upload_btn"
               onChange={(e) => setFile(e.target.files[0])}
             />
             <button className="styled_btn button_2">Upload file</button>
           </div>
+          <h4 className="absolute text-sm left-0 bottom-0">{file.name}</h4>
         </section>
-        <h3 className="upload_name">{file.name}</h3>
 
         {/* submit button */}
-        <div className="mt-16">
+        <div>
           <button
             className="button_3 disabled:bg-red-100"
             onClick={handleSubmit}

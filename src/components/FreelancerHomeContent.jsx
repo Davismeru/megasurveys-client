@@ -24,10 +24,9 @@ function FreelancerHomeContent({ surveys, loading }) {
       )}
 
       {!loading && (
-        <div className="surveys_container">
+        <div className="survey_cards_container">
           {surveys.map((survey, index) => (
             <Link
-              className="w-full"
               to={`./answer_survey/${survey.surveyId}`}
               key={survey.surveyId}
             >

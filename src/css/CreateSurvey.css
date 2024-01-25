@@ -1,5 +1,5 @@
 .create_survey_page {
-  @apply p-5;
+  @apply p-5 md:w-[60%] mx-auto;
 }
 
 .create_survey_page .heading {
@@ -7,7 +7,7 @@
 }
 
 .title_input,
-form > textarea {
+form textarea {
   @apply border border-gray-400 w-full outline-none p-3 rounded-md text-primary;
 }
 
@@ -20,6 +20,7 @@ form > textarea {
 }
 
 .create_survey_page form {
+  @apply w-full h-fit border-none;
 }
 
 .create_survey_page form label {
@@ -46,12 +47,16 @@ form > textarea {
   @apply w-12 h-12 text-white bg-red-400 text-lg flex items-center justify-center mb-1 rounded-lg;
 }
 
+.response_title {
+  @apply font-semibold text-heading;
+}
+
 .options_select section .text {
   @apply bg-sky_blue;
 }
 
 .options_select section .multiple {
-  @apply bg-pale_red;
+  /* @apply bg-pale_red; */
 }
 
 .options_select section .upload {

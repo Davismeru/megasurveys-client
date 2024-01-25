@@ -110,21 +110,22 @@ function ClientSignUp() {
         </section>
 
         {/* upload profile picture */}
-        <section>
+        <section className="relative h-32">
           <label>Upload profile picture</label>
           <div className="upload_btn_container bg-red-300">
             <input
               type="file"
+              accept=".png, .jpg, .jpeg"
               className="upload_btn"
               onChange={(e) => setFile(e.target.files[0])}
             />
             <button className="styled_btn button_2">Upload file</button>
           </div>
-          <h3>{file.name}</h3>
+          <h4 className="text-sm absolute bottom-0">{file.name}</h4>
         </section>
 
         {/* submit button */}
-        <div className="mt-16">
+        <div className="">
           <button
             className="button_3 disabled:bg-red-100"
             onClick={handleSubmit}

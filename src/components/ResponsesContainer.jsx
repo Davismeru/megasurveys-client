@@ -27,7 +27,7 @@ function ResponsesContainer({ response }) {
           <h1 className="response_question">{item.question}</h1>
 
           {/* responses to the question */}
-          <section>
+          <section className="response_section">
             {/* text response */}
             {item.textResponse && <p>{item.textResponse}</p>}
 

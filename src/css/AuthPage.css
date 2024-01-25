@@ -1,6 +1,6 @@
 /* auth pages */
 .auth_page {
-  @apply h-screen flex items-center justify-center px-5 text-xl;
+  @apply min-h-screen py-10 flex items-center justify-center px-5 text-xl;
 }
 
 .auth_page form {

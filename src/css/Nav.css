@@ -1,5 +1,5 @@
 .nav_container {
-  @apply flex justify-between items-center px-5 py-2;
+  @apply flex justify-between items-center px-5 py-2 relative;
 }
 
 .nav_container .logo {
@@ -16,4 +16,21 @@
 
 .menu_icon {
   @apply text-3xl cursor-pointer;
+}
+
+.nav_menu {
+  @apply absolute -bottom-[150%] translate-y-1/2 right-5 bg-white shadow-lg text-primary py-3 px-5 text-xl z-30 border rounded-lg flex flex-col gap-5 ease-linear duration-100 md:text-sm;
+}
+
+.hide_nav_menu {
+  @apply h-0 overflow-hidden absolute -bottom-[150%] translate-y-1/2 right-5 text-primary md:text-sm;
+}
+
+.user_type {
+  @apply font-semibold text-heading;
+}
+
+.nav_menu p,
+.nav_menu a {
+  @apply flex items-center gap-3;
 }

@@ -12,18 +12,19 @@ function Home() {
       <section>
         <div>
           <h1>
-            Welcome to <span>MegaSurveys</span>
+            Welcome to <br />
+            <span>MegaSurveys</span>
           </h1>
           <p>Your number one survey patners</p>
         </div>
 
-        <div>
+        <div className="home_btns">
           <Link to="/freelancer">
-            <button className="button_1">Find Surveys</button>
+            <button className="button_1 purple_gradient">Find Surveys</button>
           </Link>
 
           <Link to="/client">
-            <button className="button_1">Post Survey</button>
+            <button className="button_1 purple_gradient">Post Survey</button>
           </Link>
         </div>
       </section>

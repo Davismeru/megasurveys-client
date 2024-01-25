@@ -137,7 +137,7 @@ function CreateSurvey({ clientId }) {
                   {!selectedText && <MdTextFields />}
                   {selectedText && <FaCircleCheck />}
                 </div>
-                <p>Text</p>
+                <p className="response_title">Text</p>
               </section>
 
               {/* file upload */}
@@ -148,7 +148,7 @@ function CreateSurvey({ clientId }) {
                 </div>
 
                 <div>
-                  <p>File Upload</p>
+                  <p className="response_title">File Upload</p>
 
                   {selectedUpload && (
                     <ul>
@@ -192,7 +192,7 @@ function CreateSurvey({ clientId }) {
                 </div>
 
                 <div>
-                  <p>Multiple Options</p>
+                  <p className="response_title">Multiple Options</p>
 
                   {selectedMultiple && (
                     <ul>
@@ -232,11 +232,14 @@ function CreateSurvey({ clientId }) {
 
             {/* add new question button */}
             <section className="w-1/2">
-              {question && selectedOption && (
-                <button className="button_2 mt-3" onClick={handleAddQuestion}>
-                  Add question
-                </button>
-              )}
+              {question &&
+                (selectedText ||
+                  (selectedMultiple && acceptedOptions && optionsList) ||
+                  (selectedUpload && uploadType)) && (
+                  <button className="button_2 mt-3" onClick={handleAddQuestion}>
+                    Add question
+                  </button>
+                )}
             </section>
           </div>
 

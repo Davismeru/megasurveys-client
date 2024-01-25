@@ -1,9 +1,13 @@
 .card_container {
-  @apply flex-col justify-between;
+  @apply flex flex-col justify-between p-2 rounded-md mb-5 md:h-36 md:mb-0 md:w-96;
+}
+
+.card_survey_title {
+  @apply text-white text-xl font-semibold;
 }
 
 .card_date {
-  @apply text-lg text-primary font-semibold;
+  @apply text-lg text-primary font-semibold md:text-sm;
 }
 
 .card_profile_details {
@@ -11,11 +15,15 @@
 }
 
 .card_profile_img {
-  @apply bg-white w-20 h-20 rounded-full p-1;
+  @apply bg-white w-20 h-20 rounded-full p-[2px] md:w-14 md:h-14;
 }
 
 .card_profile_img img {
   @apply h-full w-full object-cover rounded-full;
+}
+
+.card_username {
+  @apply text-white;
 }
 
 .card_affiliate {

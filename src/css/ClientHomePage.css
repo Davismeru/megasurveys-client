@@ -11,11 +11,11 @@
 }
 
 .title_icon {
-  @apply w-16 h-16 rounded-full bg-pale_red text-5xl flex items-center justify-center text-white;
+  @apply w-16 h-16 rounded-full bg-pale_red text-5xl flex items-center justify-center text-white md:w-12 md:h-12 md:text-3xl;
 }
 
 .title_section p {
-  @apply text-2xl font-semibold text-heading;
+  @apply text-2xl font-semibold text-heading md:text-lg;
 }
 
 .posted_surveys {
@@ -31,13 +31,13 @@
 }
 
 .surveys_container section {
-  @apply w-full shadow-md rounded-lg text-white p-3 text-2xl flex flex-col;
+  @apply w-full shadow-md rounded-lg text-white p-3 text-2xl flex flex-col md:w-96 md:text-lg;
 }
 
 .surveys_container section .date {
-  @apply text-lg text-gray-200 font-semibold;
+  @apply text-lg text-gray-200 font-semibold md:text-sm;
 }
 
 .delete_btn {
-  @apply self-end text-3xl cursor-pointer;
+  @apply self-end text-3xl cursor-pointer md:text-2xl;
 }

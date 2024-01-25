@@ -24,6 +24,7 @@ function ConfirmDeletePage() {
       <div className="text-blue-600 mt-5">
         <Link to="/client">
           <button>Go back to surveys page</button>
+          <br />
         </Link>
 
         <button onClick={handleDelete}>Go ahead and delete This survey</button>

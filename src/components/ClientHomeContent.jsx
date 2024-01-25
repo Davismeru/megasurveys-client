@@ -57,7 +57,6 @@ function ClientHomeContent({ clientId }) {
           <div className="surveys_container">
             {surveys.map((survey, index) => (
               <Link
-                className="w-full"
                 key={survey.surveyId}
                 to={`./survey_responses/${survey.surveyId}`}
               >

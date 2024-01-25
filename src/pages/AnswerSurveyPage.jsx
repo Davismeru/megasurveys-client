@@ -4,6 +4,7 @@ import { base_api_url } from "../assets/constants";
 import { useParams, useNavigate } from "react-router-dom";
 import "../css/AnswerSurveyPage.css";
 import { authedFreelancerContext } from "../utils/appContext";
+import ConfirmResponses from "../components/ConfirmResponses";
 
 function AnswerSurveyPage({ setRender, render }) {
   const params = useParams();
@@ -48,7 +49,6 @@ function AnswerSurveyPage({ setRender, render }) {
     if (textInput || singleOptionInput || checkBoxData.length || filesInput) {
       setNoInputError(false);
       setCounter(counter + 1);
-      console.log(responses);
 
       setResponses([
         ...responses,
@@ -56,7 +56,7 @@ function AnswerSurveyPage({ setRender, render }) {
           question: surveyData[counter].question,
           surveyId: survey?.surveyId,
           questionId: counter + 1,
-          textRespone: textInput,
+          textResponse: textInput,
           uploadResponse: filesInput,
           singleOptionResponse: singleOptionInput,
           multipleOptionsResponse: checkBoxData.toString(),
@@ -97,7 +97,7 @@ function AnswerSurveyPage({ setRender, render }) {
       formData.append("question", response.question);
       formData.append("surveyId", response.surveyId);
       formData.append("questionId", response.questionId);
-      formData.append("textResponse", response.textRespone);
+      formData.append("textResponse", response.textResponse);
       formData.append("singleOption", response.singleOptionResponse);
       formData.append("multipleOptions", response.multipleOptionsResponse);
       if (response.uploadResponse) {
@@ -130,12 +130,11 @@ function AnswerSurveyPage({ setRender, render }) {
   }, []);
   return (
     <div className="answering_page">
-      {console.log(surveyData)}
       <h1 className="survey_title">{survey?.surveyTitle}</h1>
       {/* answer survey form component */}
       <form id="form">
         {surveyData && counter < surveyData.length && (
-          <div className="questions_container red_gradient">
+          <div className="questions_container teal_gradient">
             {/* survey question */}
             <p className="question">{surveyData[counter].question}</p>
 
@@ -145,14 +144,15 @@ function AnswerSurveyPage({ setRender, render }) {
               {surveyData[counter].selectedOption == "text" && (
                 <textarea
                   id="text_input"
+                  rows={3}
                   onChange={(e) => setTextInput(e.target.value)}
-                />
+                ></textarea>
               )}
 
               {/* if response == multiple option and accepted options == 1 */}
               {surveyData[counter].selectedOption == "multiple_options" &&
                 surveyData[counter].acceptedOptions == "select_one" && (
-                  <div>
+                  <div className="multiple_selections">
                     {surveyData[counter].optionsList
                       .split(",")
                       .map((option, index) => (
@@ -175,7 +175,7 @@ function AnswerSurveyPage({ setRender, render }) {
               {/* if response == multiple option and accepted options == multiple */}
               {surveyData[counter].selectedOption == "multiple_options" &&
                 surveyData[counter].acceptedOptions == "select_multiple" && (
-                  <div>
+                  <div className="multiple_selections">
                     {surveyData[counter].optionsList
                       .split(",")
                       .map((option, index) => (
@@ -195,9 +195,16 @@ function AnswerSurveyPage({ setRender, render }) {
 
               {/* if response == upload */}
               {surveyData[counter].selectedOption == "file_upload" && (
-                <div>
+                <div className="file_upload">
                   <input
                     type="file"
+                    accept={
+                      surveyData[counter].uploadType == "documents"
+                        ? ".pdf, .doc, .docx"
+                        : surveyData[counter].uploadType == "images"
+                        ? ".png,.jpg,.jpeg,.gif"
+                        : ""
+                    }
                     multiple
                     onChange={(e) => setFilesInput(e.target.files)}
                   />
@@ -206,7 +213,9 @@ function AnswerSurveyPage({ setRender, render }) {
             </section>
 
             {/* error message if no options input */}
-            {noInputError && <p>Please input this field</p>}
+            {noInputError && (
+              <p className="input_error">Please input this field</p>
+            )}
 
             {/* form navigation and submit buttons */}
             <section className="buttons_container">
@@ -223,13 +232,9 @@ function AnswerSurveyPage({ setRender, render }) {
           </div>
         )}
 
-        {/* confirm survey responses section */}
-        {surveyData && counter == surveyData.length && (
-          <div className="w-1/2 p-5">
-            <button onClick={handleSubmit} className="button_3">
-              Submit
-            </button>
-          </div>
+        {/* responses preview */}
+        {counter == surveyData?.length && (
+          <ConfirmResponses responses={responses} handleSubmit={handleSubmit} />
         )}
       </form>
     </div>
