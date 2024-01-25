@@ -1,4 +1,4 @@
-export const base_api_url = "http://localhost:3000";
+export const base_api_url = "https://megasurveys.onrender.com/";
 
 export const cardColors = [
   "bg-sky_blue",
