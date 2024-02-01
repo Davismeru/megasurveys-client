@@ -4,7 +4,7 @@
 }
 
 .auth_page form {
-  @apply w-full bg-white h-fit rounded-xl p-5 text-primary shadow-md;
+  @apply w-full bg-white h-fit rounded-md p-5 text-primary shadow-md md:w-1/2 md:text-lg;
 }
 
 .auth_page h1 {
@@ -28,7 +28,7 @@
 }
 
 .auth_page footer {
-  @apply my-3 text-lg;
+  @apply my-3 text-lg md:text-sm;
 }
 
 .auth_page footer a {
