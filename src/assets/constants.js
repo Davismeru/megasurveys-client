@@ -1,4 +1,4 @@
-export const base_api_url = "https://megasurveys-551ebe79d967.herokuapp.com/";
+export const base_api_url = "https://megasurveys-551ebe79d967.herokuapp.com";
 
 export const cardColors = [
   "bg-sky_blue",
