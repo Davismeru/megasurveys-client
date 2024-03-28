@@ -1,4 +1,4 @@
-export const base_api_url = "https://megasurvey-606b8abc2b84.herokuapp.com/";
+export const base_api_url = "https://megasurvey-606b8abc2b84.herokuapp.com";
 // export const base_api_url = "http://localhost:3000";
 
 export const cardColors = [
