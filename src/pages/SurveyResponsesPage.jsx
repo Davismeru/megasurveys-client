@@ -20,15 +20,16 @@ function SurveyResponsesPage() {
   return (
     <div className="responses_page">
       {/* no surveys posted yet message */}
-      {responses.length == 0 && (
+      {responses?.length == 0 && (
         <p className="text-pale_red">This survey is yet to get any responses</p>
       )}
 
-      {responses.map((response, index) => (
-        <section key={index}>
-          <ResponsesContainer response={response} />
-        </section>
-      ))}
+      {responses &&
+        responses?.map((response, index) => (
+          <section key={index}>
+            <ResponsesContainer response={response} />
+          </section>
+        ))}
     </div>
   );
 }
