@@ -1,0 +1,27 @@
+.home_container {
+  @apply h-screen relative bg-gray-700 px-5 overflow-x-hidden md:px-24;
+}
+
+.home_container .hero_img {
+  @apply h-full w-full object-cover absolute left-0 top-0;
+}
+
+nav {
+  @apply fixed top-0 left-0 w-full text-white bg-white bg-opacity-20;
+}
+
+.home_container section {
+  @apply z-30 relative h-full flex flex-col justify-center;
+}
+
+.home_container section h1 {
+  @apply text-4xl font-extrabold text-white md:text-6xl md:uppercase md:leading-tight;
+}
+
+.home_container section p {
+  @apply text-xl font-medium text-primary md:text-lg;
+}
+
+.home_btns {
+  @apply flex flex-wrap gap-2 mt-10;
+}

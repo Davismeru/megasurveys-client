@@ -1,0 +1,35 @@
+.card_container {
+  @apply flex flex-col justify-between p-2 rounded-md mb-5 md:h-36 md:mb-0 md:w-96;
+}
+
+.card_survey_title {
+  @apply text-white text-xl font-semibold;
+}
+
+.card_date {
+  @apply text-lg text-primary font-semibold md:text-sm;
+}
+
+.card_profile_details {
+  @apply flex items-center gap-3 relative;
+}
+
+.card_profile_img {
+  @apply bg-white w-20 h-20 rounded-full p-[2px] md:w-14 md:h-14;
+}
+
+.card_profile_img img {
+  @apply h-full w-full object-cover rounded-full;
+}
+
+.card_username {
+  @apply text-white;
+}
+
+.card_affiliate {
+  @apply absolute right-2 text-primary top-1/2 -translate-y-1/2 flex gap-2;
+}
+
+.card_affiliate span {
+  @apply text-gray-300;
+}

@@ -1,0 +1,47 @@
+.responses_page {
+  @apply px-3 py-5;
+}
+
+.response_container {
+  @apply bg-gray-800 mb-5 p-2 rounded-md text-gray-200 md:w-[45%];
+}
+
+.freelancer_details {
+  @apply flex items-center mb-2 gap-3 py-3;
+}
+
+.freelancer_details section {
+  @apply w-20 h-20 rounded-full bg-white p-1 overflow-hidden md:w-12 md:h-12;
+}
+
+.freelancer_details section img {
+  @apply object-cover w-full h-full rounded-full;
+}
+
+.freelancer_details p {
+  @apply text-xl font-semibold md:text-sm;
+}
+
+.question_answer {
+  @apply mb-3;
+}
+
+.response_question {
+  @apply text-xl font-semibold text-orange-300 md:text-sm;
+}
+
+.response_section {
+  @apply text-sm;
+}
+
+.upload_link {
+  @apply text-blue-300;
+}
+
+.responses_page ul {
+  @apply px-5;
+}
+
+.responses_page li {
+  @apply list-disc;
+}

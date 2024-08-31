@@ -1,0 +1,16 @@
+.confirm_response {
+  @apply p-5;
+}
+
+.question {
+  @apply font-semibold text-heading md:text-lg;
+}
+
+.response {
+  @apply mb-3;
+}
+
+.response p,
+.response ul {
+  @apply text-pale_red text-lg md:text-sm;
+}
